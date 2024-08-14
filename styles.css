@@ -1,0 +1,64 @@
+/* fișierul CSS pentru tema „Responsive Gallery”*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    line-height: 1.6;
+}
+
+.gallery-container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color:blue;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+.gallery-item {
+    background-color: #007BFF; /* fundal albastru */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.gallery-item img {
+    width: 100%;
+    max-width: 150px;
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    color: #fff;
+}
+
+hr {
+    border: 0;
+    height: 7px;
+    background-color: red;
+}
+
+/* Responsive design pentru tablete */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive design pentru telefoane smart */
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
